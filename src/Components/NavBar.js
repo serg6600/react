@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import logoImg from '../image/logo.svg';
+import signImg from '../image/sign.svg';
 
 const NavBarStyled = styled.header`
     position: fixed;
@@ -23,7 +24,7 @@ const Logo = styled.div`
 `;
 
 const H1 = styled.h1`
-    font-size: 24px;
+    font-size: 30px;
     margin-left: 15px;
 `;
 
@@ -31,23 +32,23 @@ const ImgLogo = styled.img`
     width: 50px;
 `;
 
-const Button = styled.button`
-    width: 100px;
-    height: 50px;
-    border: 2px solid grey;
-    font-size: 24px;
-    border-radius: 10px;
-    :hover {
-        background-color: grey;
-    }
+const Login = styled.button`
+    background-color: transparent;
+    border-color:transparent;
+    color: white;
+    font-size: 16px;
+
 `;
 
 export const NavBar = () => (
     <NavBarStyled>
         <Logo>
             <ImgLogo src={logoImg} alt="logo"/>
-            <H1>Обжорка</H1>
+            <H1>О б ж о р к а</H1>
         </Logo>
-        <Button>Enter</Button>
+        <Login>
+            <img src={signImg} alt="войти"/>
+            <p>Enter</p>
+        </Login>
     </NavBarStyled>
 );
